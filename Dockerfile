@@ -14,6 +14,8 @@ add-apt-repository \
 apt-get update && \
 apt-get -y install docker-ce
 RUN apt-get install -y docker-ce
+
+RUN chmod +x /usr/bin/docker
 RUN usermod -a -G docker jenkins
 
 RUN wget http://updates.jenkins-ci.org/download/war/2.138.1/jenkins.war
